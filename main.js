@@ -62,5 +62,5 @@ app.post("/", function (req, res) {
 var server = http.createServer(app);
 server.listen(port,
     function () {
-        console.log("server started running");
+        console.log("server started running at port 8080");
     });
