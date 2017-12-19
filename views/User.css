@@ -1,0 +1,28 @@
+.settings{
+    border: 1px solid rgb(235, 171, 171);
+    height: 150px;
+    background-color:rgb(236, 238, 228);
+}
+.logout{
+    float : right;
+}
+.body{
+    border: 5px solid rgb(235, 171, 171);
+    height: 500px;
+    background-color:rgb(236, 238, 228);
+}
+.bottom{
+    border: 3px solid rgb(235, 171, 171);
+    height: 300px;
+    background-color:rgb(228, 238, 236);
+
+}
+.userChat{
+    border: 1px solid rgb(235, 171, 171);
+    height: 200px;
+    width :  60%;
+    background-color:rgb(228, 238, 236);
+     margin-left: 300px;
+/*margin-right: 10px;*/
+
+}

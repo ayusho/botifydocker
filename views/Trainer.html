@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="Trainer.css">
+    <title>Trainer</title>
+</head>
+<body>
+<h1> Trainer</h1>
+<div class ="settings">
+<form action="/logout" method="get">
+    <div class ="logout">
+        <input type="submit" name="logout" value="logout" />
+    </div>
+</div>
+</form>
+
+<br>
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openMessage(event, 'Message1')">Message1</button><br>
+  <button class="tablinks" onclick="openMessage(event, 'Message2')">Message2</button><br>
+  <button class="tablinks" onclick="openMessage(event, 'Message3')">Message3</button>
+</div>
+
+<div id="Message1" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Message2" class="tabcontent">
+        <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Message3" class="tabcontent">
+        <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<script>
+function openMessage(evt, msgName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(msgName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+  
+</body>
+</html>
